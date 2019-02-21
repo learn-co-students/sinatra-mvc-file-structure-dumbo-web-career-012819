@@ -13,23 +13,18 @@ We'll review the file structure we'll be using for our MVC Sinatra applications.
 
 ## Keeping Code Organized
 
-We could, if we wanted to, write our entire app in a single file. As you might
-imagine, this would make things very difficult to read and debug.
+We could, if we wanted to, write our entire app in a single file. As you might imagine, this would make things very difficult to read and debug.
 
 Keeping our code organized is crucial when developing complex applications.
 This concept is called `separation of concerns` and `single responsibility`.
-Each file in our application will have a different responsibility and we'll
-keep these responsibilities split up into reasonable chunks.
+Each file in our application will have a different responsibility and we'll keep these responsibilities split up into reasonable chunks.
 
-You'll be coding along in this lesson so fork and clone this lab. There are
-tests to run to make sure your solutions are working. Find the instructions
-underneath the descriptions for each file you'll be editing.
+You'll be coding along in this lesson so fork and clone this lab. There are tests to run to make sure your solutions are working.
+Find the instructions underneath the descriptions for each file you'll be editing.
 
 ## What does a Sinatra MVC File Structure Look Like?
 
-Take a look at the file structure in this directory. It's okay if it feels
-overwhelming at first. We're going to walk through the different files and
-folders and discuss what their responsibilities are.
+Take a look at the file structure in this directory. It's okay if it feels overwhelming at first. We're going to walk through the different files and folders and discuss what their responsibilities are.
 
 ```bash
 ├── Gemfile
@@ -55,14 +50,12 @@ folders and discuss what their responsibilities are.
 
 ### `Gemfile`
 
-This holds a list of all the gems needed to run the application. The bundler
-gem provides us access to a terminal command: `bundle install`. Bundler will
-look in the Gemfile and install any gems, as well as any gem dependencies for
-this application.
+This holds a list of all the gems needed to run the application. The bundler gem provides us access to a terminal command:
+`bundle install`.
 
-Go ahead and enter this command in terminal. It will create a `Gemfile.lock`
-file for you, which is just a documentation of the specific gems version that
-should be installed.
+Bundler will look in the Gemfile and install any gems, as well as any gem dependencies for this application.
+
+Go ahead and enter this command in terminal. It will create a `Gemfile.lock` file for you, which is just a documentation of the specific gems version that should be installed.
 
 ### `app` directory
 
@@ -123,15 +116,9 @@ request to the root URL `'/'`. This `GET` request loads the `index.erb` file.
 
 #### `views` directory
 
-This directory holds the code that will be displayed in the browser. In a
-Sinatra app we use `.erb` files instead of `.html` files because .erb files
-allow us to include regular, old HTML tags AND special erb tags which contain
-Ruby code. We can name them anything we like, but by convention, our file names
-will match up with the action that renders them. For example, a GET request
-to `/` typically renders a file called `index.erb`.
+This directory holds the code that will be displayed in the browser. In a Sinatra app we use `.erb` files instead of `.html` files because .erb files allow us to include regular, old HTML tags AND special erb tags which contain Ruby code. We can name them anything we like, but  by convention, our file names will match up with the action that renders them. For example, a GET request to `/` typically renders a file called `index.erb`.
 
-Views represent how things look and are displayed in our application. We've
-created a file `index.erb` that contains some basic HTML code.
+Views represent how things look and are displayed in our application. We've created a file `index.erb` that contains some basic HTML code.
 
 We've already told the controller how to load this file in the view.
 
